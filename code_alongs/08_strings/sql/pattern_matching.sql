@@ -88,3 +88,27 @@ SELECT
     regexp_replace (trim(description), ' +', ' ', 'g') as cleaned_description
 FROM
     staging.sql_glossary;
+
+-- LIKE operator case sensitive
+SELECT
+    *
+FROM
+    refined.sql_glossary
+WHERE
+    sql_word LIKE 'ORD%';
+
+-- ILIKE operator not case sensitive
+SELECT
+    *
+FROM
+    refined.sql_glossary
+WHERE
+    example ILIKE 'select%';
+
+-- _ matches all characters
+SELECT
+    *
+FROM
+    refined.sql_glossary
+WHERE
+    example LIKE 'UP_DATE';
