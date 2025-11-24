@@ -212,3 +212,6 @@ __marimo__/
 
 # endast på mac datorer
 .DS_Store
+
+# sqlite
+*.db
